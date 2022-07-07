@@ -15,9 +15,9 @@
 				<a href="" class="hover:text-white">Business</a><hr>
 				<a href="" class="hover:text-white">Games and sports</a><hr>
 				<a href="" class="hover:text-white">Procurement</a><hr>
-				<div class=" relative">
-					<a href="" class="hover:text-white">Engineering and Computing</a>
-					<div class=" -mr-72 bg-blue-500 p-4 flex flex-col border absolute border-white">
+				<div class=" relative flex space-x-40">
+					<a href="" class="hover:text-white engineering">Engineering and Computing</a>
+					<div class=" -mr-72 bg-blue-500 p-4 flex flex-col border absolute border-white hidden comp-submenu">
 						<a href="">Mechanical Engineering</a>
 						<a href="">Electrical engineering</a>
 						<a href="">Civil Engineering</a>
@@ -58,6 +58,21 @@
 
 	$(".department").mouseleave(function(){
 		$(".department-submenu").slideUp("slow");
+	})
+
+
+	//submenu
+	$(".engineering").hover(function(){
+
+		$(".comp-submenu").slideDown("slow");
+	})
+
+	$(".comp-submenu").mouseleave(function(){
+		$(".course-submenu").hide();
+	})
+
+	$(".engineering").mouseleave(function(){
+		$(".course-submenu").hide();
 	})
 
 </script>
