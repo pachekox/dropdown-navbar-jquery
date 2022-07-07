@@ -33,14 +33,24 @@
 
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript">
+	//slide down submenu when mouse hovers 
+
 	$(".courses").hover(function(){
 		$(".course-submenu").slideDown("slow");
 
 	})
-
 	$(".department").hover(function(){
 		$(".department-submenu").slideDown("slow");
 
+	})
+	// slide up submenu when mouse leaves
+
+	$(".courses").mouseleave(function(){
+		$(".course-submenu").slideUp("slow");
+	})
+
+	$(".department").mouseleave(function(){
+		$(".department-submenu").slideUp("slow");
 	})
 
 </script>
